@@ -1,102 +1,53 @@
-﻿# 🚀 Next.js – Demo 4 Kiểu Rendering
+# Game Library — CSR Demo
 
-Dự án (starter) dùng **Next.js 14 App Router** + **TypeScript** + **Tailwind CSS**.
+Website demo dùng **Next.js 14 App Router**, **TypeScript** và **Client-Side Rendering (CSR)**.
 
----
-
-## 📋 Yêu cầu môi trường
-
-| Công cụ | Phiên bản tối thiểu | Kiểm tra |
-|---------|-------------------|----------|
-| **Node.js** | ≥ 18.17 | `node -v` |
-| **npm** | ≥ 9 | `npm -v` |
-| **Git** | bất kỳ | `git --version` |
-
-> 💡 Tải Node.js tại: https://nodejs.org (chọn bản **LTS**)
-
----
-
-## ⚡ Cài đặt & Chạy
-
-### 1. Clone repository
+## Chạy dự án
 
 ```bash
-git clone <URL-repo>
-```
-
-### 2. Vào thư mục project
-
-```bash
-cd demo
-```
-
-### 3. Cài dependencies
-
-```bash
-npm install
-```
-
-
-### 4. Chạy development server
-
-```bash
-npm run dev
-```
-
-### 5. Mở trình duyệt
-
-```
-http://localhost:3000
-```
-
-Server sẽ **tự reload** mỗi khi bạn lưu file. 🎉
-
----
-
-## 📁 Cấu trúc thư mục
-
-```
-demo/
-├── src/
-│   ├── app/              # Tất cả các trang đặt ở đây (App Router)
-│   │   ├── layout.tsx    # Layout chung
-│   │   ├── page.tsx      # Trang chủ (/)
-│   │   └── globals.css   # CSS toàn cục
-│   └── components/       # Components dùng chung
-├── package.json
-├── tailwind.config.ts
-└── next.config.mjs
-```
-
----
-
-## 📝 Yêu cầu bài tập
-
-Xây dựng một trang web bất kỳ bằng Next.js 14 và **vận dụng ít nhất 1 trong 4 kiểu rendering** sau:
-
-| Kiểu | Mô tả ngắn | Cách dùng trong Next.js 14 |
-|------|-----------|---------------------------|
-| **CSR** | Render trên trình duyệt | Thêm `"use client"` + dùng `useEffect` |
-| **SSR** | Render trên server mỗi request | `fetch(..., { cache: "no-store" })` |
-| **SSG** | Render lúc build, tĩnh hoàn toàn | `fetch(..., { cache: "force-cache" })` |
-| **ISR** | Tĩnh nhưng tự làm mới theo chu kỳ | `fetch(..., { next: { revalidate: 60 } })` |
-
-> Tham khảo thêm: [Next.js Rendering Docs](https://nextjs.org/docs/app/building-your-application/rendering)
-
----
-
-## ❓ Xử lý lỗi thường gặp
-
-**Lỗi `Cannot find module` hoặc lỗi sau khi clone:**
-```bash
-rmdir /s /q .next node_modules
 npm install
 npm run dev
 ```
 
-**Port 3000 đã bị chiếm:**
-```bash
-npm run dev -- -p 3001
+Mở `http://localhost:3000`.
+
+## Những file nên đọc
+
+- `src/app/page.tsx`: component client, tải dữ liệu bằng `useEffect` và `fetch`.
+- `src/components/GameCard.tsx`: component hiển thị một trò chơi.
+- `public/games.json`: dữ liệu game mẫu.
+- `public/images/games`: ảnh bìa được lưu cục bộ và liên kết từ `games.json`.
+- `public/fonts`: font DejaVu Sans hỗ trợ đầy đủ tiếng Việt.
+- `src/app/globals.css`: toàn bộ CSS của giao diện.
+- `src/app/layout.tsx`: layout và metadata chung.
+
+## Dấu hiệu cho biết dự án dùng CSR
+
+`page.tsx` có:
+
+```tsx
+"use client";
 ```
 
-**`npm` không nhận lệnh:** Cài lại Node.js từ https://nodejs.org rồi mở lại terminal.
+Dữ liệu được tải sau khi trang xuất hiện:
+
+```tsx
+useEffect(() => {
+  fetch("/games.json");
+}, []);
+```
+
+## Tính năng
+
+- Hiển thị danh sách game từ file JSON.
+- Tìm kiếm theo tên.
+- Lọc theo thể loại.
+- Cuộn ngang bằng nút điều hướng, touchpad hoặc thao tác vuốt trên điện thoại.
+- Có trạng thái đang tải, lỗi và không tìm thấy kết quả.
+- Responsive trên máy tính và điện thoại.
+- Dùng font cục bộ và ảnh bìa cục bộ, không cần tải tài nguyên ngoài khi mở trang.
+
+## Tài nguyên
+
+- Font: DejaVu Sans, kèm giấy phép tại `public/fonts/LICENSE.txt`.
+- Ảnh bìa: tải từ Steam CDN để phục vụ website demo học tập; bản quyền hình ảnh thuộc các nhà phát hành tương ứng.

@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "title": "Hollow Knight",
+    "genre": "Metroidvania",
+    "platform": "PC · Console",
+    "year": 2017,
+    "rating": 9.2,
+    "status": "Đã hoàn thành",
+    "image": "/images/games/hollow-knight.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Stardew Valley",
+    "genre": "Simulation",
+    "platform": "PC · Mobile",
+    "year": 2016,
+    "rating": 9.0,
+    "status": "Đang chơi",
+    "image": "/images/games/stardew-valley.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Little Nightmares",
+    "genre": "Horror Adventure",
+    "platform": "PC · Console",
+    "year": 2017,
+    "rating": 8.8,
+    "status": "Đã hoàn thành",
+    "image": "/images/games/little-nightmares.jpg"
+  },
+  {
+    "id": 4,
+    "title": "MiSide",
+    "genre": "Psychological Horror",
+    "platform": "PC",
+    "year": 2024,
+    "rating": 9.1,
+    "status": "Đang chơi",
+    "image": "/images/games/miside.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Poppy Playtime",
+    "genre": "Puzzle Horror",
+    "platform": "PC · Console",
+    "year": 2021,
+    "rating": 8.2,
+    "status": "Muốn chơi",
+    "image": "/images/games/poppy-playtime.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Five Nights at Freddy's",
+    "genre": "Survival Horror",
+    "platform": "PC · Mobile",
+    "year": 2014,
+    "rating": 8.7,
+    "status": "Đã hoàn thành",
+    "image": "/images/games/five-nights-at-freddys.png"
+  },
+  {
+    "id": 7,
+    "title": "INSIDE",
+    "genre": "Puzzle Platformer",
+    "platform": "PC · Console · Mobile",
+    "year": 2016,
+    "rating": 9.0,
+    "status": "Đã hoàn thành",
+    "image": "/images/games/inside.jpg"
+  },
+  {
+    "id": 8,
+    "title": "The Scourge | Tai Ương",
+    "genre": "Psychological Horror",
+    "platform": "PC",
+    "year": 2024,
+    "rating": 8.3,
+    "status": "Muốn chơi",
+    "image": "/images/games/tai-uong.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Ori and the Will of the Wisps",
+    "genre": "Metroidvania",
+    "platform": "PC · Console",
+    "year": 2020,
+    "rating": 9.3,
+    "status": "Muốn chơi",
+    "image": "/images/games/ori-and-the-will-of-the-wisps.jpg"
+  },
+  {
+    "id": 10,
+    "title": "GRIS",
+    "genre": "Adventure",
+    "platform": "PC · Mobile",
+    "year": 2018,
+    "rating": 8.6,
+    "status": "Muốn chơi",
+    "image": "/images/games/gris.jpg"
+  }
+]
