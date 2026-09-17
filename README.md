@@ -1,4 +1,8 @@
-﻿# 🚀 Next.js – Demo 4 Kiểu Rendering
+# [LINK SẢN PHẨM](https://hanari05.github.io/RenderingStrategies-LTWBT3/)
+
+----------------------------------------------------------------------------------------------------------------------------
+ 
+ # 🚀 Next.js – Demo 4 Kiểu Rendering
 
 Dự án (starter) dùng **Next.js 14 App Router** + **TypeScript** + **Tailwind CSS**.
 
